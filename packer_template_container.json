@@ -34,8 +34,13 @@
     [
       {
         "type": "docker-tag",
-        "repository": "futureys/symfony3",
-        "tag": "1.201807.23"
+        "repository": "futureys/heroku-php-apache2",
+        "tag": "1.201808.02"
+      },
+      {
+        "type": "docker-tag",
+        "repository": "futureys/heroku-php-apache2",
+        "tag": "latest"
       },
       {
         "type": "docker-push",
