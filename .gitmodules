@@ -40,3 +40,6 @@
 [submodule "roles/ansible-role-apache2.4-amazon-linux"]
 	path = roles/ansible-role-apache2.4-amazon-linux
 	url = git@github.com:yukihiko-shinoda/ansible-role-apache2.4-amazon-linux.git
+[submodule "roles/ansible-role-php7.2-amazon-linux2"]
+	path = roles/ansible-role-php7.2-amazon-linux2
+	url = git@github.com:yukihiko-shinoda/ansible-role-php7.2-amazon-linux2.git

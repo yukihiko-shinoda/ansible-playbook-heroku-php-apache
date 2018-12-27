@@ -5,7 +5,8 @@
     - role: ansible-role-simulate-amazon-linux-centos
       when: ansible_distribution != 'Amazon' or 'container' in group_names
     - role: ansible-role-apache2.4-amazon-linux
-    - role: ansible-role-php7.0-amazon-linux
+#    - role: ansible-role-php7.0-amazon-linux
+    - role: ansible-role-php7.2-amazon-linux2
     - role: ansible-role-mysql5.1-amazon-linux
       when: not 'container' in group_names
     - role: ansible-role-redis-amazon-linux
