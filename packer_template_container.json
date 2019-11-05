@@ -7,7 +7,7 @@
   "builders": [
     {
       "type": "docker",
-      "image": "futureys/amazonlinux:2.201812.26",
+      "image": "futureys/amazonlinux:2.201911.01",
       "commit": true,
       "changes": [
         "EXPOSE 80 443",
@@ -32,29 +32,27 @@
   ],
   "post-processors": [
     [
-      [
-        {
-          "type": "docker-tag",
-          "repository": "futureys/heroku-php-apache2",
-          "tag": "2.201812.26"
-        },{
-          "type": "docker-push",
-          "login": true,
-          "login_username": "futureys",
-          "login_password": "{{user `login_password`}}"
-        }
-      ],[
-        {
-          "type": "docker-tag",
-          "repository": "futureys/heroku-php-apache2",
-          "tag": "latest"
-        },{
-          "type": "docker-push",
-          "login": true,
-          "login_username": "futureys",
-          "login_password": "{{user `login_password`}}"
-        }
-      ]
+      {
+        "type": "docker-tag",
+        "repository": "futureys/heroku-php-apache2",
+        "tag": "201911.01"
+      },{
+      "type": "docker-push",
+      "login": true,
+      "login_username": "futureys",
+      "login_password": "{{user `login_password`}}"
+    }
+    ],[
+      {
+        "type": "docker-tag",
+        "repository": "futureys/heroku-php-apache2",
+        "tag": "latest"
+      },{
+        "type": "docker-push",
+        "login": true,
+        "login_username": "futureys",
+        "login_password": "{{user `login_password`}}"
+      }
     ]
   ]
 }
